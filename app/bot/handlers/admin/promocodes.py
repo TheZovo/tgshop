@@ -2,14 +2,14 @@ from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
-from app.db.session import SessionLocal
-from app.db.models.promocode import Promocode
-from app.bot.keyboards.admin_kb import get_admin_menu
-from app.core.logger import logger
+from db.session import SessionLocal
+from db.models.promocode import Promocode
+from bot.keyboards.admin_kb import get_admin_menu
+from core.logger import logger
 from datetime import datetime, timedelta
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
 
-from app.main import is_admin
+from bot.utils.auth import is_admin
 
 router = Router()
 

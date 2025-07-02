@@ -2,16 +2,16 @@ from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
-from app.db.models import promocode
-from app.db.session import SessionLocal
-from app.db.models.product import Product
-from app.db.models.purchase import Purchase
-from app.db.models.promocode import Promocode
-from app.db.models.payment import Payment
-from app.bot.keyboards.user_kb import get_products_keyboard, confirm_purchase_keyboard
-from app.bot.utils.payment_checker import create_cryptomus_payment
-from app.core.logger import logger
-from app.main import check_user_not_banned
+from db.models import promocode
+from db.session import SessionLocal
+from db.models.product import Product
+from db.models.purchase import Purchase
+from db.models.promocode import Promocode
+from db.models.payment import Payment
+from bot.keyboards.user_kb import get_products_keyboard, confirm_purchase_keyboard
+from bot.utils.payment_checker import create_cryptomus_payment
+from core.logger import logger
+from bot.utils.banned import check_user_not_banned
 
 router = Router()
 

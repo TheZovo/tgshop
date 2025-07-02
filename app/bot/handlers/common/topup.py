@@ -3,13 +3,14 @@ from aiogram.types import Message, CallbackQuery
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
-from app.db.session import SessionLocal
-from app.db.models.user import User
-from app.db.models.payment import Payment
-from app.bot.utils.payment_checker import create_cryptomus_payment
-from app.bot.keyboards.user_kb import get_main_menu, confirm_payment_keyboard
-from app.core.logger import logger
-from app.main import check_user_not_banned, is_admin
+from db.session import SessionLocal
+from db.models.user import User
+from db.models.payment import Payment
+from bot.utils.payment_checker import create_cryptomus_payment
+from bot.keyboards.user_kb import get_main_menu, confirm_payment_keyboard
+from core.logger import logger
+from bot.utils.auth import is_admin
+from bot.utils.banned import check_user_not_banned
 
 router = Router()
 

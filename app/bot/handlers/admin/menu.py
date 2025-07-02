@@ -1,8 +1,8 @@
 from aiogram import Router
 from aiogram.types import Message
-from app.bot.keyboards.admin_kb import get_admin_menu
-from app.core.logger import logger
-from app.main import is_admin
+from bot.keyboards.admin_kb import get_admin_menu
+from core.logger import logger
+from bot.utils.auth import is_admin
 
 router = Router()
 

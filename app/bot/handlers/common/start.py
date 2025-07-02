@@ -2,11 +2,11 @@ from aiogram import Router
 from aiogram.types import Message
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
-from app.db.session import SessionLocal
-from app.db.models.user import User
-from app.bot.utils.captcha import generate_captcha, verify_captcha
-from app.bot.keyboards.user_kb import get_main_menu
-from app.core.logger import logger
+from db.session import SessionLocal
+from db.models.user import User
+from bot.utils.captcha import generate_captcha, verify_captcha
+from bot.keyboards.user_kb import get_main_menu
+from core.logger import logger
 
 router = Router()
 

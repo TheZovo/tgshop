@@ -1,8 +1,8 @@
 from logging.config import fileConfig
 from sqlalchemy import engine_from_config, pool
 from alembic import context
-from app.db.base import Base
-from app.db.models import user, product, purchase, promocode, payment
+from db.base import Base
+from db.models import user, product, purchase, promocode, payment
 
 config = context.config
 fileConfig(config.config_file_name)

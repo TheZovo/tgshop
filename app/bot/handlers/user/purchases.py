@@ -1,11 +1,12 @@
 from aiogram import Router
 from aiogram.types import Message
-from app.db.session import SessionLocal
-from app.db.models.purchase import Purchase
-from app.db.models.product import Product
-from app.bot.keyboards.user_kb import get_main_menu
-from app.core.logger import logger
-from app.main import check_user_not_banned, is_admin
+from db.session import SessionLocal
+from db.models.purchase import Purchase
+from db.models.product import Product
+from bot.keyboards.user_kb import get_main_menu
+from core.logger import logger
+from bot.utils.auth import is_admin
+from bot.utils.banned import check_user_not_banned
 
 router = Router()
 

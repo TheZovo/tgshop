@@ -2,12 +2,12 @@ from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
-from app.db.session import SessionLocal
-from app.db.models.user import User
-from app.bot.keyboards.admin_kb import get_admin_menu
-from app.core.logger import logger
+from db.session import SessionLocal
+from db.models.user import User
+from bot.keyboards.admin_kb import get_admin_menu
+from core.logger import logger
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
-from app.main import is_admin
+from bot.utils.auth import is_admin
 
 router = Router()
 

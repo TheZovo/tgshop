@@ -1,9 +1,9 @@
 import requests
 import time
-from app.core.config import settings
-from app.db.session import SessionLocal
-from app.db.models.payment import Payment
-from app.core.logger import logger
+from core.config import settings
+from db.session import SessionLocal
+from db.models.payment import Payment
+from core.logger import logger
 
 async def create_cryptomus_payment(amount: float, user_id: str):
     url = "https://api.cryptomus.com/v1/payment"
